@@ -1,0 +1,136 @@
+* {
+    font-family: Heebo;
+    box-sizing: border-box;
+    --primary-clr: #020253;
+    --secondary-clr: #2c2c2c;
+    --input-background-clr: #f6f6f6;
+    color: var(--primary-clr);
+}
+
+body {
+    margin: 0;
+
+}
+
+input {
+    margin-bottom: 1.5rem;
+    border-top: none;
+    border-right: none;
+    border-bottom: 4px solid var(--primary-clr);
+    border-left: none;
+    background-color: var(--input-background-clr);
+    min-width: 1fr;
+    width: 100%;
+    height: 50px;
+}
+
+label {
+    color: var(--secondary-clr);
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 1px;
+    max-width: 720px;
+}
+
+.landing-container {
+    border: 1px solid #707070;
+    display: flex;
+    width: 100vw;
+    min-width: 320px;
+}
+
+h1 {
+    font-size: 2.68rem;
+    font-weight: 900;
+    margin-bottom: 1.375rem;
+
+}
+
+.sub-header {
+    font-size: 1.25rem;
+    margin-bottom: 3.4375rem;
+}
+
+.button-submit-form {
+    margin-top: 0.5rem;
+    padding: 0;
+    border: none;
+    background-color: var(--primary-clr);
+    min-width: 166px;
+    align-self: stretch;
+    font-size: 1.375rem;
+    color: white;
+    transition: background-color 500ms, font-weight 300ms;
+}
+
+/* .landing-container:hover .button-container {
+    background-color: #212174;
+    cursor: pointer;
+    font-weight: 500;
+
+} */
+
+.button-container {
+    padding: 0.5rem;
+    color: inherit;
+}
+
+@media only screen and (max-width: 1084px) {
+
+    body {
+        padding: 0.5rem;
+    }
+
+    .landing-container {
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .text-container h1,
+    .text-container p,
+    .form-container input,
+    .form-container label {
+        margin-right: 1rem;
+    }
+
+
+    .form-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .button-submit-form {
+        padding: 0.5rem 3.06rem;
+    }
+
+}
+
+@media only screen and (min-width: 1085px) {
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .landing-container {
+        flex-direction: row;
+        max-width: 100%;
+    }
+
+    .text-container {
+        order: 1;
+        flex: 1 1;
+        padding: 10vw 50px 10vw 209px;
+        min-width: max-content;
+        max-width: 820px;
+    }
+
+    .main-picture {
+        order: 2;
+        flex: 1 1 560px;
+        width: 100%;
+        /* align-self: stretch; */
+        object-fit: cover;
+    }
+}
